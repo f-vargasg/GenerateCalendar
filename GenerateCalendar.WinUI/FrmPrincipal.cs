@@ -167,8 +167,6 @@ namespace GenerateCalendar.WinUI
         DataTable BuildCalendar(int month, int year)
         {
             DataTable dtRes = null;
-            DataRow dtRow = null;
-            string res = string.Empty;
             int days;
 
             try
@@ -194,20 +192,22 @@ namespace GenerateCalendar.WinUI
                 int k;
                 string[] nomColums = {"Sun", "Mon", "Tue", "Wed", "Thu",
                                       "Fri", "Sat"};
-                DataRow dr = dtRes.NewRow();
-                for (k = 0; k < current; k++)
+                DataRow dr = null;
+                k = 0;
+                if (current > 0)
                 {
-                    nomCol = nomColums[k];
-                    dr[nomCol] = null;      // res += "     ";
+                    dr = dtRes.NewRow();
+                    for (k = 0; k < current; k++)
+                    {
+                        nomCol = nomColums[k];
+                        dr[nomCol] = null;      // res += "     ";
+                    }
                 }
-                    
                     
 
                 for (int j = 1; j <= days; j++)
                 {
-                    // printf("%5d", j);
-                    res += string.Format("{0,5:##}", j);
-                    nomCol = nomColums[(j - 1) % 6];
+                    nomCol = nomColums[k];
                     dr[nomCol] = j;
 
                     if ((++k) > 6)
@@ -215,23 +215,19 @@ namespace GenerateCalendar.WinUI
                         k = 0;
                         dtRes.Rows.Add(dr);
                         dr = dtRes.NewRow();
-                        res += Environment.NewLine;
-                        dr = dtRes.NewRow();
                     }
-                }
+                 }
 
-                if (k == 0) // new line
-                    res += Environment.NewLine;
+                if (k != 0)   // hay un sobrante
+                {
+                    dtRes.Rows.Add(dr);
+                }
                 return dtRes;
             }
             catch (Exception)
             {
-
                 throw;
             }
-            
-
-
         }
 
         // Function to print the calendar of 
@@ -267,7 +263,6 @@ namespace GenerateCalendar.WinUI
 
             for (int j = 1; j <= days; j++)
             {
-                // printf("%5d", j);
                 res += string.Format("{0,5:##}", j);
 
                 if ((++k) > 6)
@@ -297,6 +292,7 @@ namespace GenerateCalendar.WinUI
             int year = Convert.ToInt32(txtYear.Text);
             txtOutput.Text = PrintCalendar(mes, year);
             DataTable dt = BuildCalendar(mes, year);
+            dgrCalendar.DataSource = dt;
         }
     }
 
