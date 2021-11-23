@@ -189,15 +189,16 @@ namespace GenerateCalendar.WinUI
 
                 days = NumberOfDays(month, year);
                 string nomCol = string.Empty;
+
                 int k;
                 string[] nomColums = {"Sun", "Mon", "Tue", "Wed", "Thu",
                                       "Fri", "Sat"};
                 DataRow dr = null;
                 k = 0;
+                dr = dtRes.NewRow();
                 if (current > 0)
                 {
-                    dr = dtRes.NewRow();
-                    for (k = 0; k < current; k++)
+                    for (; k < current; k++)
                     {
                         nomCol = nomColums[k];
                         dr[nomCol] = null;      // res += "     ";
