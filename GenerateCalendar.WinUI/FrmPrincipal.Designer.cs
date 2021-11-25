@@ -33,13 +33,13 @@ namespace GenerateCalendar.WinUI
             this.label1 = new System.Windows.Forms.Label();
             this.txtOutput = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.tlsStrSalir = new System.Windows.Forms.ToolStripButton();
-            this.tlsStrDo = new System.Windows.Forms.ToolStripButton();
             this.txtYear = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtMes = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.tlsStrSalir = new System.Windows.Forms.ToolStripButton();
+            this.tlsStrDo = new System.Windows.Forms.ToolStripButton();
             this.dgrCalendar = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -79,39 +79,6 @@ namespace GenerateCalendar.WinUI
             this.panel1.Size = new System.Drawing.Size(710, 59);
             this.panel1.TabIndex = 6;
             // 
-            // toolStrip1
-            // 
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tlsStrSalir,
-            this.tlsStrDo});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(855, 25);
-            this.toolStrip1.TabIndex = 7;
-            this.toolStrip1.Text = "toolStrip1";
-            // 
-            // tlsStrSalir
-            // 
-            this.tlsStrSalir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tlsStrSalir.Image = ((System.Drawing.Image)(resources.GetObject("tlsStrSalir.Image")));
-            this.tlsStrSalir.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tlsStrSalir.Name = "tlsStrSalir";
-            this.tlsStrSalir.Size = new System.Drawing.Size(23, 22);
-            this.tlsStrSalir.Text = "toolStripButton1";
-            this.tlsStrSalir.ToolTipText = "Exit";
-            this.tlsStrSalir.Click += new System.EventHandler(this.tlsStrSalir_Click);
-            // 
-            // tlsStrDo
-            // 
-            this.tlsStrDo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tlsStrDo.Image = ((System.Drawing.Image)(resources.GetObject("tlsStrDo.Image")));
-            this.tlsStrDo.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tlsStrDo.Name = "tlsStrDo";
-            this.tlsStrDo.Size = new System.Drawing.Size(23, 22);
-            this.tlsStrDo.Text = "toolStripButton2";
-            this.tlsStrDo.ToolTipText = "Do Process";
-            this.tlsStrDo.Click += new System.EventHandler(this.tlsStrDo_Click);
-            // 
             // txtYear
             // 
             this.txtYear.Location = new System.Drawing.Point(180, 21);
@@ -148,6 +115,39 @@ namespace GenerateCalendar.WinUI
             this.label2.TabIndex = 3;
             this.label2.Text = "Mes:";
             // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tlsStrSalir,
+            this.tlsStrDo});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(855, 25);
+            this.toolStrip1.TabIndex = 7;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // tlsStrSalir
+            // 
+            this.tlsStrSalir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tlsStrSalir.Image = ((System.Drawing.Image)(resources.GetObject("tlsStrSalir.Image")));
+            this.tlsStrSalir.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tlsStrSalir.Name = "tlsStrSalir";
+            this.tlsStrSalir.Size = new System.Drawing.Size(23, 22);
+            this.tlsStrSalir.Text = "toolStripButton1";
+            this.tlsStrSalir.ToolTipText = "Exit";
+            this.tlsStrSalir.Click += new System.EventHandler(this.tlsStrSalir_Click);
+            // 
+            // tlsStrDo
+            // 
+            this.tlsStrDo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tlsStrDo.Image = ((System.Drawing.Image)(resources.GetObject("tlsStrDo.Image")));
+            this.tlsStrDo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tlsStrDo.Name = "tlsStrDo";
+            this.tlsStrDo.Size = new System.Drawing.Size(23, 22);
+            this.tlsStrDo.Text = "toolStripButton2";
+            this.tlsStrDo.ToolTipText = "Do Process";
+            this.tlsStrDo.Click += new System.EventHandler(this.tlsStrDo_Click);
+            // 
             // dgrCalendar
             // 
             this.dgrCalendar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -170,6 +170,7 @@ namespace GenerateCalendar.WinUI
             this.Controls.Add(this.txtOutput);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmPrincipal";
             this.Text = "Form1";
