@@ -236,7 +236,7 @@ namespace GenerateCalendar.WinUI
         string PrintCalendar(int month, int year)
         {
             string res = string.Empty;
-            res = string.Format("     Calendar - {0}"+ Environment.NewLine + Environment.NewLine , year);
+            res = string.Format("     Calendar - {0}"+ Environment.NewLine  , year);
             int days;
 
             // Index of the day from 0 to 6 
@@ -282,12 +282,12 @@ namespace GenerateCalendar.WinUI
             return res;
         }
 
-        private void tlsStrSalir_Click(object sender, EventArgs e)
+        private void TlsStrSalir_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            Application.Exit();
         }
 
-        private void tlsStrDo_Click(object sender, EventArgs e)
+        private void TlsStrDo_Click(object sender, EventArgs e)
         {
             int mes = Convert.ToInt32(txtMes.Text) - 1;
             int year = Convert.ToInt32(txtYear.Text);

@@ -135,7 +135,7 @@ namespace GenerateCalendar.WinUI
             this.tlsStrSalir.Size = new System.Drawing.Size(23, 22);
             this.tlsStrSalir.Text = "toolStripButton1";
             this.tlsStrSalir.ToolTipText = "Exit";
-            this.tlsStrSalir.Click += new System.EventHandler(this.tlsStrSalir_Click);
+            this.tlsStrSalir.Click += new System.EventHandler(this.TlsStrSalir_Click);
             // 
             // tlsStrDo
             // 
@@ -146,7 +146,7 @@ namespace GenerateCalendar.WinUI
             this.tlsStrDo.Size = new System.Drawing.Size(23, 22);
             this.tlsStrDo.Text = "toolStripButton2";
             this.tlsStrDo.ToolTipText = "Do Process";
-            this.tlsStrDo.Click += new System.EventHandler(this.tlsStrDo_Click);
+            this.tlsStrDo.Click += new System.EventHandler(this.TlsStrDo_Click);
             // 
             // dgrCalendar
             // 
